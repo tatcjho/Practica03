@@ -101,6 +101,11 @@ function ValidarFecha(){
         document.getElementById('Mensaje').className = 'Mensaje';
     }
     
+     if(Dia >31){
+        Mensaje = 'Dia incorrecto';
+        document.getElementById('Mensaje').className = 'Mensaje';
+     }
+    }
     // Mostramos el mesaje
     document.getElementById('Mensaje').innerHTML = Mensaje;
 }
