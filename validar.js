@@ -90,6 +90,15 @@ function ValidarFecha(){
       Mensaje = 'Fecha incorrecta';
      document.getElementById('Mensaje').className = 'Mensaje';
      }
+
+     if(Anio > 2019){
+        Mensaje = 'Año incorrecto';
+        document.getElementById('Mensaje').className = 'Mensaje';
+     }
+
+     if(Mes > 12){
+        Mensaje = 'Mes incorrecto';
+        document.getElementById('Mensaje').className = 'Mensaje';
     }
     
     // Mostramos el mesaje
