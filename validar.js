@@ -36,3 +36,26 @@ function sololetras(elemento) {
         return false;
     }
 }
+
+function soloNumeros(elemento){
+    var key=elemento.keyCode || elemento.which; ;
+    
+    key=elemento.keyCode || elemento.which;
+
+    teclado=String.fromCharCode(key).toLowerCase();
+
+    numeros="0123456789 ";
+
+    especiales=false;
+
+    for(var i in especiales){
+        if(key==especiales[i]){
+            teclado_especial=true;
+            break;
+        }
+    }
+    if(numeros.indexOf(teclado)==-1 && !especiales){
+        return false;
+    }
+
+}
