@@ -26,7 +26,7 @@
 			<div class="user_info">
                 
                 <label for="cedula">Cedula</label>
-                <input type="text" id="cedula">
+                <input type="text" id="cedula" maxlength="10" onkeypress="return soloNumeros(event)" onKeyUp="cedulaEC('cedula');">
 
 				<label for="names">Nombres *</label>
                 <input type="text" id="names">
