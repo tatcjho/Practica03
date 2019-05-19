@@ -41,7 +41,9 @@
                 <input type="text" id="phone">
                 
                 <label for="fechaNac">Fecha Nacimiento</label>
-                <input type="date" id="fechaNac">
+                <input type="text" id="fechaNac" placeholder="DDMMYYYY" maxlength="8" onkeypress="return soloNumeros(event)" onKeyUp="ValidarFecha('fechaNac');">
+
+				<div id="Mensaje"></div>
 
 				<label for="email">Correo electronico *</label>
 				<input type="text" id="email" placeholder="Correo Electronico UPS" onKeyUp="ValidarMail('email')" >
