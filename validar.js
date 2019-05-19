@@ -111,3 +111,61 @@ function ValidarFecha(){
 }
    
    
+
+
+//VALIDACION SOLO NUMEROS  
+
+
+function soloNumeros(elemento){
+    var key=elemento.keyCode || elemento.which; ;
+    
+    key=elemento.keyCode || elemento.which;
+
+    teclado=String.fromCharCode(key).toLowerCase();
+
+    numeros="0123456789 ";
+
+    especiales=false;
+
+    for(var i in especiales){
+        if(key==especiales[i]){
+            teclado_especial=true;
+            break;
+        }
+    }
+    if(numeros.indexOf(teclado)==-1 && !especiales){
+        return false;
+    }
+
+}
+
+
+
+//Correo Institucional UPS
+
+function ValidarMail(email){
+	//Creamos un objeto 
+	object=document.getElementById(email);
+	
+	valueForm=object.value;
+ 
+	// Patron para el correo
+    var patron=/^\w+([\.-]?\w+)*@(?:est.ups.edu.ec|ups.edu.ec|)$/;
+    // /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+	if(valueForm.search(patron)==0)
+	{
+		//Mail correcto
+		
+		object.style.color="#000";
+		return;
+	}
+	//Mail incorrecto
+	
+    object.style.color="#f00";
+    
+}
+
+
+
+
+  
