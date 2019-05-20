@@ -1,15 +1,11 @@
-var objetos = new Array();
-objetos[0] = "images/1.jpg",
-objetos[1] = "images/2.jpg";
-objetos[2] = "images/3.jpg";
-objetos[3] = "images/4.jpg";
-objetos[4] = "images/5.jpg";
-objetos[5] = "images/6.jpg";
-objetos[6] = "images/7.jpg";
-objetos[7] = "images/8.jpg";
-objetos[8] = "images/9.jpg";
-objetos[9] = "images/10.jpg";
+var imagenes = ['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg','images/6.jpg','images/7.jpg','images/8.jpg','images/9.jpg','images/10.jpg']
 
+cont=0;
+var nuevo = 0;
+
+
+    function cambio(contenedor) {
+   
 
 function aleatorio(param) {
 	var azar = Math.floor(Math.random() * objetos.length);
