@@ -17,7 +17,7 @@ function aleatorio(param) {
    
     document.images["imagen"].src = objetos[azar];
 
-}    
+}     
 
 
 
