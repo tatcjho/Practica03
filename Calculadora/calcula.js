@@ -93,3 +93,17 @@ function operacion(num){
     } 
     
     }
+
+    //Funcion para realizar las operaciones 
+
+    function calcular(){
+        var resultado=eval(document.f1.valores.value);
+    
+        if(resultado=="Ii"){
+            document.f1.valores.value="No se puede dividir entre cero";
+    
+        }else{
+            document.f1.valores.value=resultado;
+        }
+        
+    }
