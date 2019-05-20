@@ -27,3 +27,17 @@ function retornar(num){
 
     var anterior=document.f1.valores.value;
 
+    document.getElementById("valores").value=anterior+num;
+
+}
+
+//Funcion para eliminar el ultimo caracter 
+
+function eliminar(){
+
+    var anterior=document.f1.valores.value;
+
+    var nuevovalor=anterior.substring(0,anterior.length-1);
+
+    document.getElementById("valores").value=nuevovalor;
+}
