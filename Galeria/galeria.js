@@ -17,6 +17,11 @@ function aleatorio(param) {
    
     document.images["imagen"].src = objetos[azar];
 
+   function next(){
+        if(contmax<10){
+            contmax=contmax+2;
+           // alert(imagenes[contmax]);
+            document.getElementById('imagen').src =imagenes[nuevo[contmax]];
 }     
 
 
