@@ -41,3 +41,10 @@ function eliminar(){
 
     document.getElementById("valores").value=nuevovalor;
 }
+
+
+//Funcion para eliminar todo
+
+function borrarTodo(){
+    document.f1.valores.value = "";
+}
