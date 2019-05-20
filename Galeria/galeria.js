@@ -6,20 +6,32 @@ var nuevo = 0;
 
     function cambio(contenedor) {
    
+        var m = imagenes.length;
 
-function aleatorio(param) {
-	var azar = Math.floor(Math.random() * objetos.length);
+	    for(var i= 0;i<5;i++){
+            aleatorio = Math.floor(Math.random() * m--);
+            nuevo =nuevo+","+aleatorio;
+        }
+    }
     
-   
-    document.images["imagen"].src = objetos[azar];
+    document.addEventListener("DOMContentLoaded",() =>{
+       let contenedor = document.querySelector('.contenedor');
+    })
+
+  
+   contmax=0;
+   contmin=0;
 
    function next(){
         if(contmax<10){
             contmax=contmax+2;
            // alert(imagenes[contmax]);
             document.getElementById('imagen').src =imagenes[nuevo[contmax]];
-}     
-
+        }
+        else
+         alert('Ultima imagen')
+ 
+    }
 
 
    function prev(){
@@ -30,6 +42,3 @@ function aleatorio(param) {
         else
             alert('Ultima imagen')
     }   
-/* Establece el tiempo 1 minuto = 60000 milliseconds. */
-window.setInterval("reFresh()",300000);
-// -->
