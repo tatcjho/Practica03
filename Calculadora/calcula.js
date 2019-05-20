@@ -22,4 +22,8 @@ function soloNumeros(e){
 }
 
 
+//Funcion para asignar cada valor 
+function retornar(num){
+
+    var anterior=document.f1.valores.value;
 
