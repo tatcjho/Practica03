@@ -1,0 +1,94 @@
+body{
+    background-image: url(../images/instagram-hex-colors-gradient-background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.padre{
+    
+    width: 700px;
+    height: 600px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 300px;
+}
+
+
+#imagen {
+    width: 700px;
+    height: 500px;
+    text-align: center;
+    margin-inline-end: 100px;
+    border: 2px solid black;
+
+}
+
+#atras{
+    width: 200px;
+    height: 80px;
+    padding-top: 100px;
+    border: 2px solid black;
+    background-color: plum;;
+    text-align: center;
+    color: black; 
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: -0px;
+    margin-top: 25px;
+
+    
+    
+}
+
+#inicio{
+    width: 200px;
+    height: 80px;
+    padding-top: 100px;
+    border: 2px solid black;
+    background-color: plum;
+    text-align: center;
+    color: black; 
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 25px;
+    margin-left: 25px;
+
+
+}
+
+#generar{
+    width: 200px;
+    height: 80px;
+    padding-top: 100px;
+    border: 2px solid black;
+    background-color: plum;
+    text-align: center;
+    color: black; 
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+
+           /*
+    
+button{
+    background-color: #fff;
+    color: #27ae60; 
+    border: 2px solid #27ae60;
+    font-size: 20px;
+    font-weight: bold;
+    width: 95px; 
+    cursor: pointer;
+    padding: 5px;
+}
+            
+#rightContentDiv #navspace  {cursor:pointer;}
+
+*/
