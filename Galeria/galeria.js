@@ -21,10 +21,14 @@ function aleatorio(param) {
 
 
 
-/// BOTON INICIO 
-function reFresh() {
-location.reload(true)
-}
+   function prev(){
+        if(contmax > 0){
+            contmax=contmax-2;
+            document.getElementById('imagen').src =imagenes[nuevo[contmax]];
+        }
+        else
+            alert('Ultima imagen')
+    }   
 /* Establece el tiempo 1 minuto = 60000 milliseconds. */
 window.setInterval("reFresh()",300000);
 // -->
