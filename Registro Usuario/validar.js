@@ -40,9 +40,24 @@ function sololetras(elemento) {
 //CONTROL DE DOS PALABRAS
 
 
-function dosPalabrasN(nombre) {
+function dosPalabras(e) { 
+    tecla = (document.all) ? e.keyCode : e.which; 
+    if (tecla==8) return true; //Tecla de retroceso (para poder borrar) 
+    // dejar la línea de patron que se necesite y borrar el resto 
+    patron =/^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']+[\s])+([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])$/; // Solo acepta letras 
+    //patron = /\d/; // Solo acepta números 
+    //patron = /\w/; // Acepta números y letras 
+    //patron = /\D/; // No acepta números 
+    // 
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); 
+    } 
 
-    key=nombre.keyCode || nombre.which;
+
+/*
+    
+    
+    //key=nombre.keyCode || nombre.which;
     var m = document.getElementById("nombre").value;
 
     teclado=String.fromCharCode(key).toLowerCase();
@@ -54,6 +69,7 @@ function dosPalabrasN(nombre) {
       alert("La matrícula es correcta");
     else
       alert("Solo puede ingresar dos palabras");
+
 }
 
 
@@ -189,7 +205,7 @@ function ValidarMail(email){
 	valueForm=object.value;
  
 	// Patron para el correo
-    var patron=/^\w+([\.-]?\w+)*@(?:est.ups.edu.ec|ups.edu.ec|)$/;
+    var patron=/^\w+([\.-]{3,8}?\w+)*@(?:est.ups.edu.ec|ups.edu.ec|)$/;
     // /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 	if(valueForm.search(patron)==0)
 	{
