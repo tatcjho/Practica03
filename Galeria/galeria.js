@@ -40,5 +40,5 @@ var nuevo = 0;
             document.getElementById('imagen').src =imagenes[nuevo[contmax]];
         }
         else
-            alert('Ultima imagen')
+            alert('Primera imagen')
     }   
