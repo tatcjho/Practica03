@@ -1,57 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE html  >
 <html>
-    <head>
-        <title>Calculadora</title>
-
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="CSS/index.css" type="text/css">
-        <script type="text/javascript" src="calculadora.js"></script>
-    </head>
-
-    <body>
-    
-        <form name="f1"><br>
-
-            <input type="text"name="valores" id="valores" onkeypress="return solonumeros(event)">
-            <br>
-            
-            <input type="text" name="txtcaja2" value="0">
-            <br>
-
-            <input type="button" class="arit" value="%">
-            <input type="button" value="√" onclick="raizc()">
-            <input type="button" value="x²" onClick="escribir('^')">
-            <input type="button" value="¹/×" onClick="escribir('7')">
-            <br>
-            <input type="button" class="clear"  value="CE"  >
-            <input type="button" class="clear"  value="C" onclick="borrarTodo()">
-            <input type="button" class="clear" onclick="eliminar()" value="◄">
-             
-            <input type="button" class="arit"  value="÷" onclick="operacion(value)">
-            <br>
-            <input type="button"  value="7"  onClick="retornar(value)">
-            <input type="button"  value="8"  onClick="retornar(value)">
-            <input type="button"  value="9"  onClick="retornar(value)">
-            <input type="button"  class="operacion" value="*" onclick="operacion(value)">
-            <br>
-            <input type="button"  value="4"  onClick="retornar(value)">
-            <input type="button"  value="5"  onClick="retornar(value)">
-            <input type="button"  value="6"  onClick="retornar(value)">
-            <input type="button"  class="arit" value="-" onclick="operacion(value)">
-            <br>
-            <input type="button"  value="1"  onClick="retornar(value)">
-            <input type="button"  value="2"  onClick="retornar(value)">
-            <input type="button"  value="3"  onClick="retornar(value)">
-            <input type="button"  class="operacion" value="+" onclick="operacion(value)">
-            <br>
-            <input type="button"  value="±">
-            <input type="button"  value="0"  onClick="retornar(value)">
-            <input type="button"  value="." onClick="retornar(value)">
-            <input type="button"  value="=" onclick="calcular()">
-            <br>
-            </form>
+<head>
+<title>Calculadora</title> 
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="CSS/index.css" />
+<script type="text/javascript" src="calcula.js"></script>
+</head>
+<body>
+</p>
 
 
-    </body>
+<form name="calculator">
+<tr><td>
+<tr><td>
+<table class="calculadora" cellpadding=0>
+<tr><td  ><b style="color:rgb(7, 211, 7)">Calculadora</b></td></tr>
+<tr><td>
+<table class="calculadora" width="100%" border=0>
+<tr><td colspan=6><input type="text" name="answer" size=30 maxlength=30 onChange="setNum(this.value)" class="calculadora3"></td></tr>
+<tr><td colspan=6>
+<table  border=0 cellpadding=0>
+<tr><td>
+
+
+<input type="button" name="sqrt" value="   √  " onClick="raiz(); return false;">
+<input type="button" name="percent" value=" %  " onClick="porcentaje(); return false;">
+<input type="button" name="recip" value="1/x " onClick="divUno(); return false;">
+<input type="button" name="cuadra" value="   ²  " onClick="cuadrado(); return false;">
+<br>
+
+<input type="button" name="CE"  value=" CE " onClick="borrado();  return false;"> 
+<input type="button" name="C" value="  C  " onClick="borrado(); return false;">
+<input type="button" name="C" value=" R   " onClick="borrado(); return false;">
+<input type="button" name="divide" value="  /  " onClick="division(1); return false;">
+
+<br>
+
+<input type="button" name="n7" value="  7  " onClick="setNum('7'); return false;">
+<input type="button" name="n8" value="  8  " onClick="setNum('8'); return false;">
+<input type="button" name="n9" value="  9  " onClick="setNum('9'); return false;">
+<input type="button" name="multiply" value="  *  " onClick="multi(1); return false;">
+<br>
+
+
+<input type="button" name="n4" value="  4  " onClick="setNum('4'); return false;">
+<input type="button" name="n5" value="  5  " onClick="setNum('5'); return false;">
+<input type="button" name="n6" value="  6  " onClick="setNum('6'); return false;">
+<input type="button" name="minus" value="  -  " onClick="resta(); return false;">
+<br>
+
+
+
+
+<input type="button" name="n1" value="  1  " onClick="setNum('1'); return false;">
+<input type="button" name="n2" value="  2  " onClick="setNum('2'); return false;">
+<input type="button" name="n3" value="  3  " onClick="setNum('3'); return false;">
+<input type="button" name="plus" value=" +  " onClick="suma(1); return false;">
+<br>
+
+<input type="button" name="negate" value="+/- " onClick="negativo(); return false;">
+<input type="button" name="n0" value="  0  " onClick="setNum('0'); return false;">
+<input type="button" name="dot" value="  .   " onClick="setNum('.'); return false;">
+<input type="button" name="equal" value="  =   " onClick="igual(); return false;">
+
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+</table>
+</form>
+
+</body>
 
 </html>
