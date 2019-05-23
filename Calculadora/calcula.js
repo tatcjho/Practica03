@@ -1,109 +1,156 @@
-//Funcion para validar que solo se acepte numeros 
+var data = 0;
+var n1 = "";
+var n2 = "";
+var nuevoNum = "blank";
+var opvalue = "";
 
-function soloNumeros(e){
-
-    key =e.keyCode || e.which; //entrada del teclado
-    teclado=String.fromCharCode(key);
-
-    numeros="0123456789";
-     
-    especiales="8-37-39-46";
-
-    tecla_especial=false;
-
-    for(var i in especiales){
-        if(key==especiales[i]){
-            tecla_especial=true;
-        }
-    }
-    if(numeros.indexOf(teclado)==-1 && !tecla_especial){
-        return false;
-    }
+function pantalla(pantallanumber) 
+{
+document.calculator.answer.value = pantallanumber;
 }
 
-
-//Funcion para asignar cada valor 
-function retornar(num){
-
-    var anterior=document.f1.valores.value;
-
-    document.getElementById("valores").value=anterior+num;
-
+function borrar() 
+{
+data = 0;
+document.calculator.mem.value = "";
 }
 
-//Funcion para eliminar el ultimo caracter 
-
-function eliminar(){
-
-    var anterior=document.f1.valores.value;
-
-    var nuevovalor=anterior.substring(0,anterior.length-1);
-
-    document.getElementById("valores").value=nuevovalor;
+function borrado() 
+{
+n1 = "";
+n2 = "";
+nuevoNum = "blank";
+pantalla("");
 }
 
-
-//Funcion para eliminar todo
-
-function borrarTodo(){
-    document.f1.valores.value = "";
+function borradoMemoria()
+{
+n2 = "";
+nuevoNum = "yes";
+pantalla("");
 }
 
-//Funcion para realizar las operaciones 
+function setNum(answer) 
+{
+   if(answer == ".")
+   {
+      Number = document.calculator.answer.value;
+      if(Number.indexOf(".") != -1) 
+      {
+      answer = "";
+      }
+   }
+   if(nuevoNum == "yes") 
+   {
+      n2 += answer;
+      pantalla(n2);
+   }
+   else 
+   {
+      if(nuevoNum == "blank")
+      {
+         n1 = answer;
+         n2 = "";
+         nuevoNum = "no";
+      }
+      else 
+      {
+         n1 += answer;
+      }
+      pantalla(n1);
+   }
+}
 
+function suma(x) 
+{
+   if(x == 1) igual();
+   if(n2 != "")
+   {
+      n1 = parseFloat(n1) + parseFloat(n2);
+   }
+   nuevoNum = "yes";
+   opvalue = '+';
+   pantalla(n1);
+}
 
-function operacion(num){ 
+function resta(x) 
+{
+   if(x == 1) igual();
+   if(n2 != "") 
+   {
+       n1 = parseFloat(n1) - parseFloat(n2);
+   }
+   nuevoNum = "yes";
+   opvalue = '-';
+   pantalla(n1);
+}
 
-    var anterior = document.f1.valores.value;
-    if(anterior==""){
-    document.f1.valores.value="";
-    }else{    
-        var anterior = document.f1.valores.value;
-        document.getElementById("valores").value=anterior+num;
-        esto=document.f1.valores.value;
-    
-        record=0; 
-        igual=1; 
-        var letraRecord 
-        var b=0 
-        var letra="" 
-    
-        for (a=1;a<esto.length;a++){      
-        if (esto.charAt(a)=="+" || esto.charAt(a)=="-" || esto.charAt(a)=="*" || esto.charAt(a)=="/" || esto.charAt(a)=="."){ 
-        igual=igual+1; 
-        letra=esto.charAt(a);
-        }else{ 
-             if(igual>record){record=igual;letraRecord=letra} 
-                igual=1 
-             } 
-             b=a 
-        }
-        
-        if(igual>record){
-          record=igual;
-          letraRecord=letra;
-        } 
-    
-        if (record>2){
-            var anterior = esto;
-            var nuevovalor = anterior.substring(0, anterior.length-1);
-            document.getElementById("valores").value=nuevovalor;
-            record=0;b=0;igual=1;letra="";letraRecord="";
-        }     
-    } 
-    
-    }
+function multi(x) 
+{
+   if(x == 1) igual();
+   if(n2 != "")
+   {
+     n1 = parseFloat(n1) * parseFloat(n2);
+   }
+   nuevoNum = "yes";
+   opvalue = '*';
+   pantalla(n1);
+}
 
-    //Funcion para realizar las operaciones 
-
-    function calcular(){
-        var resultado=eval(document.f1.valores.value);
-    
-        if(resultado=="Ii"){
-            document.f1.valores.value="No se puede dividir entre cero";
-    
-        }else{
-            document.f1.valores.value=resultado;
-        }
-        
-    }
+function division(x) 
+{
+   if(x == 1) igual();
+   if(n2 != "")
+   {
+      n1 = parseFloat(n1) / parseFloat(n2);
+   }
+   nuevoNum = "yes";
+   opvalue = '/';
+   pantalla(n1);
+}
+function raiz()
+{
+   n1 = Math.sqrt(n1);
+   nuevoNum = "blank";
+   pantalla(n1);
+}
+function porcentaje() 
+{
+   if(nuevoNum != "blank") 
+   {
+      n2 *= .01;
+      nuevoNum = "blank";
+      pantalla(n2);
+   }
+}
+function cuadrado()
+{
+   n1 = Math.pow(n1,2);
+   nuevoNum="blank";
+   pantalla(n1);
+}
+function divUno() 
+{
+   n1 = 1/n1;
+   nuevoNum = "blank";
+   pantalla(n1);
+}
+function negativo() 
+{
+   n1 = parseFloat(-n1);
+   nuevoNum = "no";
+   pantalla(n1);
+}
+function igual() {
+if(opvalue == '²') cuadrado(0);
+if(opvalue == '+') suma(0);
+if(opvalue == '-') resta(0);
+if(opvalue == '*') multi(0);
+if(opvalue == '/') division(0);
+if(opvalue == '√') raiz(0);
+if(opvalue == '%') porcentaje(0);
+if(opvalue == '1/x') divUno(0);
+if(opvalue == '+/-') negativo(0);
+n2 = "";
+opvalue = "";
+}
