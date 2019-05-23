@@ -5,6 +5,8 @@ ACTIVIDAD 1:
  
  ![1](https://github.com/tatcjho/Practica03/blob/master/Capturas/calculadora.png)
 Ilustración 1 Captura de la calculadora
+
+
 A continuación, se presenta el código que se aplicó para poder resolver las operaciones aritméticas:
 
 function suma(x) 
@@ -104,8 +106,11 @@ Ilustración 3 Captura que resalta los cuadros no llenados
  
 En esta captura nos podemos percatar que, al llenar todos los campos, incluso los que señalo que debíamos llenar y pulsamos aceptar, nos redirige a una página php, en donde se muestra únicamente el mensaje que diciendo “Bienvenido, ¡pasaste las validaciones!”, mismo que nos indica que las validaciones fueron exitosas.
 
+
+
  ![8](https://github.com/tatcjho/Practica03/blob/master/Capturas/Captura%20identificando%20errores.png)
 En esta captura nos podemos percatar que, al no llenar los campos correctamente estos se marcan de rojo, ya que en que en el placeholder se definió la estructura de como ingresar los datos, además son validaciones tales como:
+
 
 •	Validación de cedula ecuatoriana.
 •	Ingreso de fecha de nacimiento en el orden “DDMMYYYY”
