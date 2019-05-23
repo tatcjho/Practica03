@@ -1,3 +1,4 @@
+/*
 function validarCamposObligatorios(){
     var cedula, nombre, apellido, direccion, phone, fechaNac,email;
     nombre = document.getElementById("nombre").value;
@@ -13,6 +14,69 @@ function validarCamposObligatorios(){
     }
 
 }
+*/
+
+
+function validarCamposObligatorios(){
+
+    var bandera = false
+    
+
+    for(var i = 0; i < document.forms[0].length; i++){
+        var elemento = document.forms[0].elements[i]
+        if(elemento.value.trim() == ''){
+            bandera = true;
+            if(elemento.id == 'cedula')
+            {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeCedula").innerHTML = ('cedula obligatoria')
+            }
+            if(elemento.id == 'nombre')
+            {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeNombres").innerHTML = ('nombres obligatorios')
+            }
+            if(elemento.id == 'apellido')
+            {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeApellidos").innerHTML = ('apellidos obligatorios')
+            }
+            if(elemento.id == 'direccion')
+            {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeDireccion").innerHTML = ('direccion obligatoria')
+            }
+            if(elemento.id == 'phone')
+            {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeTelefono").innerHTML = ('telefono obligatorio')
+            }
+            if(elemento.id == 'fechaNac')
+            {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeFecha").innerHTML = ('fecha de nacimiento obligatorio')
+            }
+            if(elemento.id == 'email')
+            {
+                elemento.style.border = "1px red solid"
+                document.getElementById("mensajeCorreo").innerHTML = ('correo obligatorio')
+            }
+        }
+    }
+
+    if(bandera)
+    {
+        alert('Llenar todos los campos correctamente')
+        return false
+    }else{
+        return true
+    }
+
+} 
+
+
+
+
 
 function sololetras(elemento) {
     key=elemento.keyCode || elemento.which;
