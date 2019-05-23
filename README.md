@@ -88,6 +88,7 @@ function negativo()
    pantalla(n1);
 }
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ACTIVIDAD 2:
 
@@ -103,17 +104,22 @@ Ilustración 3 Captura que resalta los cuadros no llenados
  
 En esta captura nos podemos percatar que, al llenar todos los campos, incluso los que señalo que debíamos llenar y pulsamos aceptar, nos redirige a una página php, en donde se muestra únicamente el mensaje que diciendo “Bienvenido, ¡pasaste las validaciones!”, mismo que nos indica que las validaciones fueron exitosas.
 
+ ![8](https://github.com/tatcjho/Practica03/blob/master/Capturas/Captura%20identificando%20errores.png)
+En esta captura nos podemos percatar que, al no llenar los campos correctamente estos se marcan de rojo, ya que en que en el placeholder se definió la estructura de como ingresar los datos, además son validaciones tales como:
+
+•	Validación de cedula ecuatoriana.
+•	Ingreso de fecha de nacimiento en el orden “DDMMYYYY”
+•	Correo electrónico de la Universidad Politécnica Salesiana patito123@ups.edu.ec o patito123@est.ups.edu.ec
 
 
 
+![9](https://github.com/tatcjho/Practica03/blob/master/Capturas/Captura%20sin%20errores.png)
+
+En esta captura podemos identificar que se ha ingresado correctamente la información por lo que no marca con rojo alguna casilla, además cabe recalcar que el campo fecha de nacimiento, cedula y celular son solo numéricos; nombres y apellidos son solo letras, y en dirección esta para que ingrese normalmente.
 
 
 
-
-
-
-
-
+----------------------------------------------------------------------------------------------------------------------------------------
 ACTIVIDAD 3:
  
 ![4](https://github.com/tatcjho/Practica03/blob/master/Capturas/Captura%20galer%C3%ADa%20slider%20HTML%20js.png) 
