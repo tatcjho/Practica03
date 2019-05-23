@@ -176,7 +176,7 @@ function ValidarFecha(fechaNac){
     // Almacenamos el valor digitado en TxtFecha
     var Fecha = document.getElementById('fechaNac').value;
     var Mensaje = '';
-    document.getElementById('Mensaje').className = '';
+   
     
     // Si la fecha está completa comenzamos la validación
     if(Fecha.length == 8){
@@ -213,12 +213,10 @@ function ValidarFecha(fechaNac){
         Mensaje = 'Año incorrecto';
         document.getElementById('Mensaje').className = 'Mensaje';
      }
-
     // if(Mes > 12){
         Mensaje = 'Mes incorrecto';
         document.getElementById('Mensaje').className = 'Mensaje';
      }
-
     // if(Dia >31){
         Mensaje = 'Dia incorrecto';
         document.getElementById('Mensaje').className = 'Mensaje';
@@ -226,10 +224,8 @@ function ValidarFecha(fechaNac){
      */
     }
     
-    // Mostramos el mesaje
-    document.getElementById('Mensaje').innerHTML = Mensaje;
+  
 }
-
 
 
 
